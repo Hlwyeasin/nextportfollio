@@ -10,7 +10,8 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="text-black w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+    <div className="text-black w-11/12 max-w-3xl text-center
+     mx-auto h-screen flex flex-col items-center justify-center gap-4">
       
       {/* Profile Image */}
       <div className="relative h-32 w-32">
@@ -43,7 +44,8 @@ const Header = () => {
         {/* Contact Button */}
         <a
           href="#contact"
-          className="px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 dark:bg-transparent"
+          className="px-10 py-3 border border-white rounded-full bg-black
+           text-white flex items-center gap-2 dark:bg-transparent"
         >
           Contact Me
           <Image src={assets.right_arrow_white} alt="arrow" width={16} height={16} />
@@ -52,7 +54,8 @@ const Header = () => {
         {/* Resume Button */}
         <a
           download
-          className="px-10 py-3 border rounded-full border-gray-500 flex items-center gap-2 bg-white dark:text-black"
+          className="px-10 py-3 border rounded-full border-gray-500
+           flex items-center gap-2 bg-white dark:text-black"
         >
           My Resume
           <Image src={assets.download_icon} alt="download" width={16} height={16} />

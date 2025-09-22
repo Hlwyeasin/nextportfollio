@@ -34,7 +34,10 @@ const About = ({ isDarkMode }) => {
           <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mb-6">
             {infoList.map(({ icon, iconDark, title, description }, index) => (
               <li
-                className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-amber-200 hover:translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50"
+                className="border-[0.5px] border-gray-400 rounded-xl p-6 
+                cursor-pointer hover:bg-amber-200
+                 hover:translate-y-1 duration-500 hover:shadow-black dark:border-white
+                  dark:hover:shadow-white dark:hover:bg-darkHover/50"
                 key={index}
               >
                 <Image
@@ -60,7 +63,9 @@ const About = ({ isDarkMode }) => {
           <ul className="flex items-center gap-3 sm:gap-5">
             {toolsData.map((tool, index) => (
               <li
-                className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500"
+                className="flex items-center justify-center
+                 w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg 
+                 cursor-pointer hover:-translate-y-1 duration-500"
                 key={index}
               >
                 <Image src={tool} alt="Tool" width={28} height={28} />

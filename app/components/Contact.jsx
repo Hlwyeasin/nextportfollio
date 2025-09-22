@@ -1,8 +1,3 @@
-
-
-
-
-
 // 00000000000000000000000000000000000000000000000000000000000
 "use client"; // ✅ Required for useState
 
@@ -55,34 +50,51 @@ const Contact = () => {
             name="name"
             placeholder="Enter your name"
             required
-            className="p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90"
+            className="p-3 outline-none border-[0.5px] border-gray-400 
+            rounded-md bg-gray-200 dark:bg-darkHover/30 dark:border-white/90"
           />
           <input
             type="email"
             name="email"
             placeholder="Enter your email"
             required
-            className="p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90"
+            className="p-3 outline-none border-[0.5px] border-gray-400 
+            rounded-md bg-gray-200 dark:bg-darkHover/30 dark:border-white/90"
           />
           <textarea
             name="message"
             rows="6"
             placeholder="Enter your message"
             required
-            className="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90"
+            className="w-full p-4 outline-none border-[0.5px] border-gray-400 
+            rounded-md bg-gray-200  mb-6 dark:bg-darkHover/30 dark:border-white/90"
           ></textarea>
 
           <button
             type="submit"
-            className="py-3 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500  dark:bg-transparent dark:border-[0.5px] dark:hover:bg-darkHover"
+            className="group relative py-3 px-10 w-max mx-auto flex items-center gap-3 
+             overflow-hidden rounded-full bg-gradient-to-r from-yellow-200 to-yellow-500 
+             text-black font-semibold shadow-md transition-all duration-500 
+             hover:shadow-2xl hover:scale-105"
           >
-            Submit now
-            <Image
-              src={assets.right_arrow_white}
-              alt="Arrow"
-              width={16}
-              height={16}
-            />
+            {/* Shine Effect */}
+            <span
+              className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 
+                   blur-xl transition-opacity duration-500"
+            ></span>
+
+            {/* Button Text */}
+            <span className="relative z-10">Send Message</span>
+
+            {/* Arrow Icon */}
+            <span className="relative z-10 transform group-hover:translate-x-1 transition-transform duration-300">
+              <Image
+                src={assets.right_arrow_white}
+                alt="Arrow"
+                width={20}
+                height={20}
+              />
+            </span>
           </button>
 
           <p className="text-center mt-4 text-sm text-gray-700 font-medium">
