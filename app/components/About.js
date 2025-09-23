@@ -1,8 +1,6 @@
-
-
-import { assets, infoList, toolsData } from "@/assets/assets";
-import Image from "next/image";
-import React from "react";
+import { assets, infoList, toolsData } from '@/assets/assets';
+import Image from 'next/image';
+import React from 'react';
 
 const About = ({ isDarkMode }) => {
   return (
@@ -30,36 +28,11 @@ const About = ({ isDarkMode }) => {
             contributing to their success and growth.
           </p>
 
-          {/* Info List */}
-          <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mb-6">
-            {infoList.map(({ icon, iconDark, title, description }, index) => (
-              <li
-                className="border-[0.5px] border-gray-400 rounded-xl p-6 
-                cursor-pointer hover:bg-amber-200
-                 hover:translate-y-1 duration-500 hover:shadow-black dark:border-white
-                  dark:hover:shadow-white dark:hover:bg-darkHover/50"
-                key={index}
-              >
-                <Image
-                  src={isDarkMode ? iconDark : icon}
-                  alt={title}
-                  width={40}
-                  height={40}
-                />
-                <h3 className="my-4 font-semibold text-gray-700 dark:text-white">
-                  {title}
-                </h3>
-                <p className="text-gray-600 text-sm dark:text-white/80">
-                  {description}
-                </p>
-              </li>
-            ))}
-          </ul>
-
           {/* Tools */}
-          <h4 className="my-6 text-gray-700 font-Ovo dark:text-white/80">
+          <h4 className="my-6 text-gray-700 font-Ovo dark:text-black">
             Tools I use
           </h4>
+
           <ul className="flex items-center gap-3 sm:gap-5">
             {toolsData.map((tool, index) => (
               <li
